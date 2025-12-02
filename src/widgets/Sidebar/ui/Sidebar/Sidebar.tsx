@@ -1,14 +1,14 @@
 import { classNames } from "shared/lib/classNames/classNames";
-import cls from "./Sidebar.module.scss";
 import { useState } from "react";
 import { ThemeSwitcher } from "shared/ThemeSwitcher";
 import { LangSwitcher } from "shared/LangSwitcher";
+import cls from "./Sidebar.module.scss";
 
 interface SidebarProps {
   className?: string;
 }
 
-export const Sidebar = ({ className }: SidebarProps) => {
+export function Sidebar({ className }: SidebarProps) {
   const [collapsed, setCollapsed] = useState(false);
 
   const onToggle = () => {
@@ -28,4 +28,4 @@ export const Sidebar = ({ className }: SidebarProps) => {
       </div>
     </div>
   );
-};
+}

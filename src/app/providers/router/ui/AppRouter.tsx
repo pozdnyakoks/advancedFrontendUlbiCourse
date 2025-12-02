@@ -12,11 +12,11 @@ export function AppRouter() {
           <Route
             key={path as string}
             path={path}
-            element={
+            element={(
               <Suspense fallback={<div>Загрузка...</div>}>
                 <div className="page-wrapper">{element}</div>
               </Suspense>
-            }
+            )}
           />
         ))}
       </Routes>
